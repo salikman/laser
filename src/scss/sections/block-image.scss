@@ -1,0 +1,23 @@
+.block-image {
+    padding: rem(10) 0;
+
+    &_wrapper {
+        img {
+            width: 100%;
+            max-height: rem(620);
+            aspect-ratio: 16/9;
+            border-radius: rem(15);
+            object-fit: cover;
+        }
+    }
+
+    &_row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(20);
+
+        @include media-mx(991) {
+            grid-template-columns: 1fr;
+        }
+    }
+}

@@ -1,0 +1,92 @@
+.services {
+    padding: rem(10) 0;
+
+    &_wrapper {
+        padding: rem(60) rem(140);
+        background: #F4F4F4;
+        border-radius: rem(15);
+
+        @include media-mx(1239) {
+            padding: rem(60) rem(40);
+        }
+        @include media-mx(991) {
+            padding: rem(40) rem(30);
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: rem(20);
+        text-align: center;
+        font-size: rem(16);
+        font-weight: 500;
+    }
+
+    &__title {
+        max-width: rem(1100);
+        margin: 0 auto rem(40);
+        text-align: center;
+        @include adaptiv-font(42, 28);
+        font-weight: 500;
+        line-height: 1.2;
+        text-transform: uppercase;
+
+        span {
+            color: var(--primary-color);
+        }
+
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(rem(400), 1fr));
+        gap: rem(20);
+        row-gap: rem(50);
+
+        @include media-mx(767) {
+            grid-template-columns: 1fr;
+            row-gap: rem(20);
+        }
+
+        li {
+            display: flex;
+            flex-direction: column;
+            gap: rem(20);
+            padding: rem(20);
+            background: white;
+            border-radius: rem(10);
+
+            img {
+                width: 100%;
+                aspect-ratio: 16/9;
+                border-radius: rem(10);
+            }
+
+            h4 {
+                @include adaptiv-font(22, 18);
+                font-weight: 500;
+            }
+
+            p {
+                @include adaptiv-font(18, 16);
+                font-weight: 500;
+                line-height: 1.2;
+
+                span {
+                    color: var(--primary-color);
+                }
+            }
+        }
+    }
+
+    &__link {
+        display: block;
+        width: max-content;
+        margin: rem(50) auto 0;
+        padding: rem(15) rem(30);
+        background: var(--primary-color);
+        color: white;
+        border-radius: rem(8);
+        font-size: rem(18);
+        font-weight: 500;
+    }
+}

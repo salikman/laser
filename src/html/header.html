@@ -1,0 +1,46 @@
+<header class="header">
+  <div class="header__container">
+    <div class="header_wrapper">
+      <a href="#" class="header__logo logo">
+        <img src="@img/logo.png" alt="">
+      </a>
+      <nav class="header__menu menu">
+        <ul class="menu__list">
+          <li class="menu__item"><a href="#" class="menu__link"><span>About</span></a></li>
+          <li class="menu__item has-dropdown">
+            <a href="#" class="menu__link"><span>Services</span><i></i></a>
+          
+            <ul class="dropdown">
+              <li><a href="#">Rust removal from almost any surfaces</a></li>
+              <li><a href="#">Automotive Cleaning</a></li>
+              <li><a href="#">Laser Art Restoration </a></li>
+              <li><a href="#">Ships and Marines</a></li>
+            </ul>
+          </li>
+          <li class="menu__item"><a href="#" class="menu__link"><span>Our Team</span></a></li>
+          <li class="menu__item"><a href="#" class="menu__link"><span>Contacts</span></a></li>
+        </ul>
+      </nav>
+      <a href="#" class="header__email">
+        <img src="@img/carbon_email.svg" alt="">
+        <span>nikola.gcc@gmail.com</span>
+      </a>
+      <a href="#" class="header__phone">
+        <img src="@img/iconoir_phone.svg" alt="">
+        <span>089 610 3010</span>
+      </a>
+  
+      <div class="header__lang">
+        <div class="lang-current">
+          <span>En</span>
+          <img src="@img/eva_arrow-up-fill.svg" alt="">
+        </div>
+        <div class="lang-dropdown">
+          <a href="/">En</a>
+          <a href="/">De</a>
+        </div>
+      </div>
+      @@include('./icon-menu.html', {})
+    </div>
+  </div>
+</header>

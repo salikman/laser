@@ -1,0 +1,30 @@
+/* Style the list */
+ul.breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: rem(20) 0 rem(10);
+
+    li {
+        font-size: rem(16);
+        font-weight: 500;
+
+        &+li:before {
+            padding: 0 rem(8);
+            content: url('../images/eva_arrow-up-fill-small.svg');
+        }
+
+        a {
+
+            img {
+                width: rem(24);
+                height: rem(24);
+            }
+
+            &:hover {
+                color: var(--primary-color);
+                text-decoration: underline;
+            }
+        }
+    }
+}

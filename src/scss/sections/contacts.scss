@@ -1,0 +1,58 @@
+.contacts {
+    padding: rem(10) 0;
+
+    &_wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(20);
+
+        @include media-mx(991) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &_text {
+        display: flex;
+        flex-direction: column;
+        gap: rem(20);
+        padding: rem(60);
+        padding-left: rem(140);
+        background: #F4F4F4;
+        border-radius: rem(15);
+
+        @include media-mx(991) {
+            padding: rem(40) rem(30);
+        }
+    }
+
+    &__title {
+        @include adaptiv-font(42, 28);
+        font-weight: 500;
+        line-height: 1.2;
+        text-transform: uppercase;
+    }
+
+    &__subtitle {
+        @include adaptiv-font(20, 16);
+        font-weight: 500;
+        line-height: 1.2;
+    }
+
+    &__link {
+        width: max-content;
+        color: var(--primary-color);
+        @include adaptiv-font(22, 16);
+        font-weight: 500;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &_map {
+        height: rem(350);
+        background: #F4F4F4;
+        border-radius: rem(15);
+        overflow: hidden;
+    }
+}

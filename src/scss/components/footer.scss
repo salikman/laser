@@ -1,0 +1,44 @@
+.footer {
+  padding: rem(20) 0 rem(30);
+  background: transparent;
+
+  &_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(20);
+    padding: rem(14) rem(20);
+    background: #F4F4F4;
+    border-radius: rem(15);
+
+    @include media-mx(991) {
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    @include media-mx(991) {
+      order: 1;
+    }
+  }
+
+  &__reserved {
+    text-align: center;
+    font-size: rem(16);
+    font-weight: 500;
+    line-height: 1.5;
+
+    @include media-mx(991) {
+      order: 3;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: rem(25);
+
+    @include media-mx(991) {
+      order: 2;
+    }
+  }
+}

@@ -1,0 +1,132 @@
+.feedback {
+    padding: rem(10) 0;
+
+    &_wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(20);
+        background: var(--primary-color);
+        border-radius: rem(15);
+
+        @include media-mx(991) {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+    }
+
+    &_text {
+        padding: rem(60) rem(140);
+        padding-right: 0;
+
+        @include media-mx(991) {
+            padding: rem(40) rem(30);
+        }
+        @include media-mx(475) {
+            padding: rem(30) rem(15);
+        }
+    }
+
+    &__title {
+        margin-bottom: rem(40);
+        color: white;
+        @include adaptiv-font(42, 28);
+        font-weight: 500;
+        line-height: 1.2;
+        text-transform: uppercase;
+
+        span {
+            color: var(--primary-color);
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: rem(10);
+        color: white;
+        @include adaptiv-font(20, 16);
+        font-weight: 500;
+        line-height: 1.2;
+
+        ul {
+            padding-left: rem(30);
+
+            li {
+                list-style: disc;
+            }
+        }
+    }
+
+    &_form {
+        padding: rem(20);
+        padding-left: rem(100);
+
+        @include media-mx(991) {
+            padding: rem(30);
+        }
+        @include media-mx(767) {
+            padding: rem(15);
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            padding: rem(40);
+            background: white;
+            border-radius: rem(15);
+
+            @include media-mx(767) {
+                padding: rem(20);
+            }
+
+            &__title {
+                margin-bottom: rem(40);
+                @include adaptiv-font(32, 22);
+                font-weight: 500;
+                text-transform: uppercase;
+                line-height: 1.2;
+            }
+
+            &_inner {
+                display: flex;
+                flex-direction: column;
+                gap: rem(18);
+                max-width: rem(500);
+                width: 100%;
+            }
+
+            &__input {
+                width: 100%;
+
+                input {
+                    width: 100%;
+                    padding: rem(15) rem(30);
+                    border: rem(1) solid #C7C7C7;
+                    border-radius: rem(8);
+
+                    &::placeholder {
+                        color: #828282;
+                    }
+                }
+            }
+
+            &__button {
+                button {
+                    width: max-content;
+                    padding: rem(15) rem(30);
+                    background: var(--primary-color);
+                    color: white;
+                    border-radius: rem(8);
+                    font-size: rem(18);
+                    font-weight: 500;
+
+                    @include media-mx(475) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
