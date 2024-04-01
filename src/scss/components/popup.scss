@@ -37,6 +37,7 @@
     position: relative;
     width: 100%;
     margin: 0 auto;
+    border-radius: rem(15);
 
     /** Установить свои значения */
     padding: rem(30) rem(50);
@@ -45,6 +46,10 @@
     transform: translateY(rem(-200));
     opacity: 0;
     transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  
+    @include media-mx(767) {
+      padding: rem(20);
+    }
   }
 
   // .popup__close
