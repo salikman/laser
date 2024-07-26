@@ -14,10 +14,12 @@
     margin-top: rem(10);
   }
 
-  .header-is-sticky & {
-    // ..стили для липкого хедера
-    // position: fixed;
-    // background-color: #007aff;
+  @include media-mx(991) {
+    .header-is-sticky & {
+      // ..стили для липкого хедера
+      position: fixed;
+      // background-color: #007aff;
+    }
   }
 
   // .header__container
@@ -205,6 +207,10 @@
       align-items: center;
       gap: rem(10);
       height: rem(24);
+
+      @include media-mn(991) {
+        height: 70px;
+      }
   
       span {
         color: white;
@@ -231,6 +237,7 @@
     visibility: hidden;
     overflow: auto;
     transition: all .3s ease;
+    box-shadow: 0 0 5px rgba(black, .2);
 
     @include media-mx(767) {
       top: rem(85);
@@ -267,7 +274,7 @@
   @include media-mn(992) {
     position: relative;
 
-    &.open-drop .dropdown {
+    &:hover .dropdown {
       opacity: 1;
       visibility: visible;
       transform: translateY(0);
@@ -286,6 +293,7 @@
       visibility: hidden;
       transform: translateY(10px);
       transition: all .3s ease;
+      box-shadow: 0 0 5px rgba(black, .2);
 
       li {
         a {
@@ -304,6 +312,9 @@
   @include media-mx(991) {
     &.open-drop .dropdown {
       display: block;
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
     }
 
     .dropdown {
